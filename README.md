@@ -1,7 +1,7 @@
 
 <img align="right" src="python_logo/python-logo@2x.png">
 
-${\huge{\textsf{\textcolor{#0A1589}{This is my Python starter}}}}$
+${\huge{\textsf{\textcolor{#0A1589}{Tired of creating virtual environments and installing dependencies?}}}}$
 
 I created this project generator script to automate the setting up a of new Python project.
 
@@ -17,15 +17,16 @@ Run it from your shell or IDE. That's it.
 
 ${\large{\textsf{\textcolor{#0A1589}{What does it do?}}}}$
 
-It creates the virtual environment, project structure, files and configuration for your project.
+It creates the virtual environment, project structure and files for your project.
 
-It upgrades pip, installs Django or any other dependencies you want and applies initial migrations to the database.
+It upgrades pip to the latest version and installs any dependencies you need.
 
+You can also create whatever directories structure you want.
 
 
 ${\large{\textit{\textcolor{#0A1589}{I have my own way of structuring the folders... Can I customize it?}}}}$
 
-Yes. Right at the beginning of the script you'll find 2 tuples: ${\textbf{\textsf{\textcolor{Process#0A1589}{'project\\_folders'}}}}$ and ${\textbf{\textsf{\textcolor{Process#0A1589}{'app\\_folders'}}}}$
+Yes. Right at the beginning of the script you'll find a tuple: ${\textbf{\textsf{\textcolor{Process#0A1589}{'project\\_folders'}}}}$
 
 A single string represents a directory to be created.
 
