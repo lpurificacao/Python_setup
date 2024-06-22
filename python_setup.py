@@ -6,7 +6,7 @@ import venv
 # -------------------- You can customize the settings bellow --------------------
 
 # You can customize the 'dependencies' dict with the dependencies to be installed:
-dependencies = {'mypy', 'numpy'}
+dependencies = ('MyPy', 'numpy', 'Typer')
 
 # You can customize the 'project_folders' tuple:
 # A tuple of strings means a parent directory, a child directory, so on and so forth.
@@ -72,18 +72,6 @@ def install_dependencies():
     try:
         if not dependencies:
             raise Exception('There are no dependencies to be installed,')
-        elif len(dependencies) > 1:
-            which_dependencies = list(dependencies.keys())
-            print('---->', which_dependencies)
-            first_dependency = which_dependencies[0]
-            whats_happening = f'\n\tCollecting {first_dependency}...'
-            line_start = len(whats_happening) - len(first_dependency)
-            all_others = which_dependencies[1:]
-            print(whats_happening)
-            for _ in all_others:
-                whats_happening = f"{''.ljust(line_start)}{_}..."
-                cmd = f'{python} -m pip install {_} --quiet'
-                run_cmd(cmd, step=whats_happening)
         else:
             for _ in dependencies:
                 whats_happening = f'\n\tCollecting {_}...'

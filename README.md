@@ -32,7 +32,7 @@ A single string represents a directory to be created.
 
 A tuple of strings means a parent directory, a child directory, so on and so forth.
 
-There is also a ${\textbf{\textsf{\textcolor{Process#0A1589}{'dependencies'}}}}$ dictionary. This is where you instruct it to install any libraries.
+There is also a ${\textbf{\textsf{\textcolor{Process#0A1589}{'dependencies'}}}}$ list. This is where you instruct it to install any libraries.
 
 
 ${\large{\textsf{\textcolor{#0A1589}{What have I learned working on this project?}}}}$
