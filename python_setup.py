@@ -6,7 +6,7 @@ import venv
 # -------------------- You can customize the settings bellow --------------------
 
 # Customize the 'dependencies' tuple with the dependencies to be installed:
-dependencies = ('MyPy', 'Typer')
+dependencies = ('emoji',) # The emoji module will be installed as an example
 
 # You can customize the 'project_folders' tuple:
 project_folders = (
