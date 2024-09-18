@@ -1,6 +1,7 @@
 
 <img align="right" src="python_logo/python-logo@2x.png">
 
+
 ${\huge{\textsf{\textcolor{#0A1589}{Tired of creating virtual environments and installing dependencies?}}}}$
 
 I created this project generator script to automate the setting up a of new Python project.
