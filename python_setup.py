@@ -5,14 +5,13 @@ import venv
 
 # -------------------- You can customize the settings bellow --------------------
 
-# You can customize the 'dependencies' dict with the dependencies to be installed:
-dependencies = ('MyPy', 'numpy', 'Typer')
+# Customize the 'dependencies' tuple with the dependencies to be installed:
+dependencies = ('MyPy', 'Typer')
 
 # You can customize the 'project_folders' tuple:
-# A tuple of strings means a parent directory, a child directory, so on and so forth.
 project_folders = (
-    ('templates', 'static'),
-    'media'
+    'media',  # A single folder
+    ('templates', 'static'),  # A parent directory, a child directory, so on and so forth
 )
 
 # -------------------- You can customize the settings above --------------------
@@ -42,23 +41,22 @@ def get_folder_name(parameter):  # Used twice to get project and app names
 def run_cmd(cmd, step):
     try:
         print(step)
-        subprocess.Popen([sys.executable, cmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        # subprocess.run(cmd, shell=True, check=True, cwd=project)  # setting current dir where cmds will be run
+        subprocess.run(cmd, shell=True, check=True, cwd=project)  # setting current dir where cmds will be run
     except subprocess.CalledProcessError as e:
         print(f"\n\tsubprocess.CalledProcessError returned this error: \n\t{e}")
     except ValueError as e:
         print(f'{e} please try again.')
 
 
-# paths for subprocess cmds
+# paths for subprocess commands
 project = get_folder_name(parameter=project_question)
 venv_path = os.path.join(project, '.venv')
-python = os.path.join(project,'.venv/bin/python')
+python = '.venv/bin/python'
 
 
 # Creating venv
-def create_venv():
-    run_cmd()
+def create_venv(venv_path):
+    print(f"\n\tCreating the virtual environment...")
     builder = venv.EnvBuilder(system_site_packages=False, symlinks=True, with_pip=True)
     builder.create(venv_path)
 
@@ -78,20 +76,33 @@ def install_dependencies():
             for _ in dependencies:
                 whats_happening = f'\n\tCollecting {_}...'
                 cmd = f'{python} -m pip install {_} --quiet'
-                # cmd = f'{python} -m pip install {_} --quiet'
                 run_cmd(cmd, step=whats_happening)
     except Exception as e:
         print(f'\t{e}')
         sys.exit()
 
 
+def create_extra_folders():
+    project_str = f"\n\tFolders created in project '{project}':"
+    print(project_str)
+    project_str_start = len(project_str)
+    for _ in project_folders:
+        if isinstance(_, tuple):
+            folder = os.path.join(project, '/'.join(_))
+            os.makedirs(folder)
+            print(f"{''.ljust(project_str_start)}'{'/'.join(_)}'")
+        else:
+            folder = os.path.join(project, _)
+            os.makedirs(folder)
+            print(f"{''.ljust(project_str_start)}'{_}'")
+
+
 def create_project():
-    create_venv()
+    create_venv(venv_path)
     upgrade_pip()
     install_dependencies()
+    create_extra_folders()
 
 
 if __name__ == '__main__':
     create_project()
-
-
