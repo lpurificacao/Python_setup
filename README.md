@@ -10,7 +10,9 @@ I created this project generator script to automate the setting up a of new Pyth
 
 ${\large{\textsf{\textcolor{#0A1589}{How to use it?}}}}$
 
-Just copy the script and run it from your shell or IDE. That's it.
+Just copy the script and run it from your shell or IDE. You will be prompted to name your project and app.
+
+That's it.
 
 
 ${\large{\textsf{\textcolor{#0A1589}{What does it do?}}}}$
