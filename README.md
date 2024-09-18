@@ -28,13 +28,13 @@ You can also create whatever directory structure you want.
 
 ${\large{\textit{\textcolor{#0A1589}{I have my own way of structuring the folders... Can I customize it?}}}}$
 
-Yes. Right at the beginning of the script you'll find a tuple: ${\textbf{\textsf{\textcolor{Process#0A1589}{'project\\_folders'}}}}$
+Yes. Right at the beginning of the script you'll find a tuple: ${\textbf{\textsf{\textcolor{ProcessBlue}{'project\\_folders'}}}}$
 
 A single string represents a directory to be created.
 
 A tuple of strings means a parent directory, a child directory, so on and so forth.
 
-There is also a ${\textbf{\textsf{\textcolor{Process#0A1589}{'dependencies'}}}}$ list. This is where you instruct it to install any libraries.
+There is also a ${\textbf{\textsf{\textcolor{ProcessBlue}{'dependencies'}}}}$ list. This is where you instruct it to install any libraries.
 
 
 ${\large{\textsf{\textcolor{#0A1589}{Did you know?}}}}$
