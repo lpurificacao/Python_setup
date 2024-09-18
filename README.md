@@ -9,13 +9,12 @@ I created this project generator script to automate the setting up a of new Pyth
 
 ${\large{\textsf{\textcolor{#0A1589}{How to use it?}}}}$
 
-Just copy the script to the directory where you want to create your Python project.
-
-Run it from your shell or IDE. That's it.
-
+Just copy the script and run it from your shell or IDE. That's it.
 
 
 ${\large{\textsf{\textcolor{#0A1589}{What does it do?}}}}$
+
+Your project is created one level above the directory from where you're running the script.
 
 It creates the virtual environment, project structure and files for your project.
 
