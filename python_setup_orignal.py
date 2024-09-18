@@ -42,7 +42,8 @@ def get_folder_name(parameter):  # Used twice to get project and app names
 def run_cmd(cmd, step):
     try:
         print(step)
-        subprocess.run(cmd, shell=True, check=True, cwd=project)  # setting current dir where cmds will be run
+        subprocess.Popen([sys.executable, cmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        # subprocess.run(cmd, shell=True, check=True, cwd=project)  # setting current dir where cmds will be run
     except subprocess.CalledProcessError as e:
         print(f"\n\tsubprocess.CalledProcessError returned this error: \n\t{e}")
     except ValueError as e:
@@ -52,11 +53,12 @@ def run_cmd(cmd, step):
 # paths for subprocess cmds
 project = get_folder_name(parameter=project_question)
 venv_path = os.path.join(project, '.venv')
-python = '.venv/bin/python'
+python = os.path.join(project,'.venv/bin/python')
 
 
 # Creating venv
 def create_venv():
+    run_cmd()
     builder = venv.EnvBuilder(system_site_packages=False, symlinks=True, with_pip=True)
     builder.create(venv_path)
 
@@ -76,6 +78,7 @@ def install_dependencies():
             for _ in dependencies:
                 whats_happening = f'\n\tCollecting {_}...'
                 cmd = f'{python} -m pip install {_} --quiet'
+                # cmd = f'{python} -m pip install {_} --quiet'
                 run_cmd(cmd, step=whats_happening)
     except Exception as e:
         print(f'\t{e}')
@@ -90,4 +93,5 @@ def create_project():
 
 if __name__ == '__main__':
     create_project()
+
 
