@@ -21,7 +21,7 @@ It creates the virtual environment, project structure and files for your project
 
 It upgrades pip to the latest version and installs any dependencies you need.
 
-You can also create whatever directories structure you want.
+You can also create whatever directory structure you want.
 
 
 ${\large{\textit{\textcolor{#0A1589}{I have my own way of structuring the folders... Can I customize it?}}}}$
@@ -35,8 +35,11 @@ A tuple of strings means a parent directory, a child directory, so on and so for
 There is also a ${\textbf{\textsf{\textcolor{Process#0A1589}{'dependencies'}}}}$ list. This is where you instruct it to install any libraries.
 
 
-${\large{\textsf{\textcolor{#0A1589}{What have I learned working on this project?}}}}$
+${\large{\textsf{\textcolor{#0A1589}{Did you know?}}}}$
 
-Unknown to me before, one does not need to activate the virtual environment to install packages or libraries.
+Nowhere in the script is the virtual environment activated.
 
-Running system commands while handling input/output errors with Python's very handy built-in module [subprocess](https://docs.python.org/3/library/subprocess.html)
+One does not need to activate it to install packages or libraries.
+
+
+
