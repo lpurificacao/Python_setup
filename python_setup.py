@@ -24,7 +24,8 @@ project_question = f"\n\tName your project to be created in '{parent_dir}' folde
 def get_folder_name(parameter):  # Used twice to get project and app names
     while True:
         try:
-            new_folder = os.path.join(parent_dir, input(f"{parameter}").strip().replace(' ', '_'))
+            new_folder = input(f"{parameter}").strip().replace(' ', '_')
+            # new_folder = os.path.join(parent_dir, input(f"{parameter}").strip().replace(' ', '_'))
             if new_folder.lower() == 'exit':
                 print('\n\tPython interpreter terminated.')
                 break
