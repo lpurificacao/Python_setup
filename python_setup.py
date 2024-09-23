@@ -3,7 +3,7 @@ import subprocess
 import sys
 import venv
 
-# -------------------- You can customize the settings bellow --------------------
+# -------------------- You can customize the tuples below --------------------
 
 # Customize the 'dependencies' tuple with the dependencies to be installed:
 dependencies = ('emoji',) # The emoji module will be installed as an example
