@@ -10,14 +10,12 @@ I created this project generator script to automate the setting up a of new Pyth
 
 ${\large{\textsf{\textcolor{#0A1589}{How to use it?}}}}$
 
-Just copy the script `python_setup.py` and run it from your shell or IDE. You will be prompted to name your project and app.
-
-That's it.
+Just copy the script `python_setup.py` and run it from your shell or IDE. You will be prompted to name your project and app. That's it.
 
 
 ${\large{\textsf{\textcolor{#0A1589}{What does it do?}}}}$
 
-It creates the virtual environment in the current folder, project structure and files for your project.
+It creates the virtual environment in the parent folder, project structure and files for your project.
 
 It upgrades pip to the latest version and installs any dependencies you need.
 
