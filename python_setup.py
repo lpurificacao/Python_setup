@@ -10,8 +10,8 @@ dependencies = ('emoji',) # The emoji module will be installed as an example
 
 # You can customize the 'project_folders' tuple:
 project_folders = (
-    'media',  # A single folder
-    ('templates', 'static'),  # A parent directory, a child directory, so on and so forth
+    'some_folder',  # A single folder
+    ('another_folder', 'some_subfolder'),  # A parent directory, a child directory, so on and so forth
 )
 
 # -------------------- You can customize the settings above --------------------
@@ -50,7 +50,7 @@ def run_cmd(cmd, step):
 
 
 # paths for subprocess commands
-project = get_folder_name(parameter=project_question)
+project = os.path.join(parent_dir,get_folder_name(parameter=project_question))
 venv_path = os.path.join(project, '.venv')
 python = '.venv/bin/python'
 
