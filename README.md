@@ -10,7 +10,9 @@ I created this project generator script to automate the setting up a of new Pyth
 
 ${\large{\textsf{\textcolor{#0A1589}{How to use it?}}}}$
 
-Just copy the script `python_setup.py` and run it from your shell or IDE. You will be prompted to name your project and app. That's it.
+Just copy the script `python_setup.py` and run it. 
+
+You will be prompted to name your project and app. That's it.
 
 
 ${\large{\textsf{\textcolor{#0A1589}{What does it do?}}}}$
@@ -19,12 +21,10 @@ It creates the virtual environment in the parent folder, project structure and f
 
 It upgrades pip to the latest version and installs any dependencies you need.
 
-You can also create whatever directory structure you want.
 
+${\large{\textit{\textcolor{#0A1589}{I have my own way of structuring the folders I need... Can I customize it?}}}}$
 
-${\large{\textit{\textcolor{#0A1589}{I have my own way of structuring the folders... Can I customize it?}}}}$
-
-Yes. Right at the beginning of the script you'll find a tuple: ${\textbf{\textsf{\textcolor{ProcessBlue}{'project\\_folders'}}}}$
+Yes. You'll find the tuple: ${\textbf{\textsf{\textcolor{ProcessBlue}{'project\\_folders'}}}}$
 
 A single string represents a directory to be created.
 
