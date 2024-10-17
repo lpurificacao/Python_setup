@@ -24,11 +24,9 @@ It upgrades pip to the latest version and installs any dependencies you need.
 
 ${\large{\textit{\textcolor{#0A1589}{I have my own way of structuring the folders I need... Can I customize it?}}}}$
 
-Yes. You'll find the tuple ${\textbf{\textsf{\textcolor{ProcessBlue}{'project\\_folders'}}}}$
+Yes. You'll find the tuple ${\textbf{\textsf{\textcolor{ProcessBlue}{'project\\_folders'}}}}$. A single string inside this tuple represents a folder to be created.
 
-A single string represents a directory to be created.
-
-A tuple of strings means a parent directory, a child directory, so on and so forth.
+A tuple of strings means a folder, its subfolder, so on and so forth.
 
 There is also a ${\textbf{\textsf{\textcolor{ProcessBlue}{'dependencies'}}}}$ list. This is where you instruct it to install any libraries.
 
