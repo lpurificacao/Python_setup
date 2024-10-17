@@ -33,6 +33,6 @@ There is also a ${\textbf{\textsf{\textcolor{ProcessBlue}{'dependencies'}}}}$ li
 
 ${\large{\textsf{\textcolor{#0A1589}{Did you know?}}}}$
 
-Nowhere in the script is the virtual environment activated.
+Nowhere in the process is the virtual environment activated.
 
-One does not need to activate it to install packages or libraries.
+We do not need to activate it to install packages or libraries.
