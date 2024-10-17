@@ -24,7 +24,7 @@ It upgrades pip to the latest version and installs any dependencies you need.
 
 ${\large{\textit{\textcolor{#0A1589}{I have my own way of structuring the folders I need... Can I customize it?}}}}$
 
-Yes. You'll find the tuple ${\textbf{\textsf{\textcolor{ProcessBlue}{'project\\_folders'}}}}$. A single string inside this tuple represents a folder to be created.
+Yes. You'll find a tuple named ${\textbf{\textsf{\textcolor{ProcessBlue}{'project\\_folders'}}}}$. A single string inside this tuple represents a folder to be created.
 
 A tuple of strings means a folder, its subfolder, so on and so forth.
 
